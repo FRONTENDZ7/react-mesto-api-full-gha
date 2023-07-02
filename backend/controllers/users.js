@@ -41,7 +41,6 @@ const registerUser = (req, res, next) => {
   passwordHash.then((hash) => User.create({
     name, about, avatar, email, password: hash,
   }))
-  
     .then(() => res.status(SUCCESS_CREATED).send({
       name, about, avatar, email,
     }))
