@@ -12,7 +12,7 @@ class AuthApi {
   }
 
   tokenVerification (token) {
-    return fetch(`${this._authUrl}users/me`, {
+    return fetch(`${this._authUrl}/users/me`, {
     
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +23,7 @@ class AuthApi {
   }
  
   userAuthorization (password, email) {
-    return fetch(`${this._authUrl}signin`, {
+    return fetch(`${this._authUrl}/signin`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ class AuthApi {
   }
   
   userRegistration (password, email) {
-    return fetch(`${this._authUrl}signup`, {
+    return fetch(`${this._authUrl}/signup`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",

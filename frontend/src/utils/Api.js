@@ -12,7 +12,7 @@ class Api {
   }
  
   getInitialCards() {
-    return fetch(`${this._link}cards`, {
+    return fetch(`${this._link}/cards`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ class Api {
   }
   
   addNewCard(name, link) {
-    return fetch(`${this._link}cards`, {
+    return fetch(`${this._link}/cards`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ class Api {
   }
  
   deleteCard(cardId) {
-    return fetch(`${this._link}cards/${cardId}`, {
+    return fetch(`${this._link}/cards/${cardId}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ class Api {
   }
   
   getUserData() {
-    return fetch(`${this._link}users/me`, {
+    return fetch(`${this._link}/users/me`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ class Api {
   }
   
   sendUserData(userName, userAbout) {
-    return fetch(`${this._link}users/me`, {
+    return fetch(`${this._link}/users/me`, {
       method: "PATCH",
       headers: {
         'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ class Api {
   }
  
   sendAvatarData(avatarLink) {
-    return fetch(`${this._link}users/me/avatar`, {
+    return fetch(`${this._link}/users/me/avatar`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ class Api {
   
   changeLikeCardStatus(cardId, isLiked) {
     const methodUsed = isLiked ? 'PUT' : 'DELETE';
-    return fetch(`${this._link}cards/${cardId}/likes`, {
+    return fetch(`${this._link}/cards/${cardId}/likes`, {
       method: methodUsed,
       headers: {
         'Content-Type': 'application/json',
