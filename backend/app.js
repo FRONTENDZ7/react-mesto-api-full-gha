@@ -27,10 +27,10 @@ mongoose.set('strictQuery', false);
 mongoose.connect(mongoDB);
 
 app.use(express.json());
-app.use(limiter);
-app.use(helmet());
-
 app.use(requestLogger);
+app.use(helmet());
+app.use(limiter);
+
 
 app.get('/crash-test', () => {
   setTimeout(() => {
