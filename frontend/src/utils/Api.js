@@ -93,6 +93,6 @@ class Api {
   }
 }
 
-const apiConnect = new Api('https://backend.nomoreparties.sbs');
+const apiConnect = new Api('https://backend.nomoreparties.sbs/');
 
 export default apiConnect;
