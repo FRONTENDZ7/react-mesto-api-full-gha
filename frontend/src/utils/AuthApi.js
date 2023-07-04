@@ -23,7 +23,7 @@ class AuthApi {
   }
  
   userAuthorization (password, email) {
-    return fetch(`${this._authUrl}signin`, {
+    return fetch(`${this._authUrl}/signin`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
